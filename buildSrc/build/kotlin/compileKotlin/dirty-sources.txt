@@ -1,2 +1,0 @@
-/home/steve/androidstudioprojects/WestforceCreditUnion/buildSrc/src/main/kotlin/Dependencies.kt
-/home/steve/androidstudioprojects/WestforceCreditUnion/buildSrc/src/main/kotlin/Versions.kt
