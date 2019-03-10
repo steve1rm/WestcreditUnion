@@ -7,7 +7,7 @@ object Versions {
     const val compileSdkVersion = 28
     const val versionCode = 1
     const val versionName = "1.0"
-    const val kotlinVersion = "1.2.51"
+    const val kotlinVersion = "1.3.0"
     const val gradleVersion = "3.3.2"
 
     /** Testing */
