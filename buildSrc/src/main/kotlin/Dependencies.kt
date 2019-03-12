@@ -6,7 +6,6 @@ object Plugins {
 object Libraries {
     const val kotlinStdlib = "org.jetbrains.kotlin:kotlin-stdlib:${Versions.kotlinVersion}"
     const val appCompat = "androidx.appcompat:appcompat:${Versions.androidXVersion}"
-    const val junit = "junit:junit:${Versions.jUnitVersion}"
 }
 
 object TestLibraries {

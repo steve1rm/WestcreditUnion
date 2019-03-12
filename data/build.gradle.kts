@@ -1,5 +1,3 @@
-import com.google.wireless.android.sdk.stats.TestLibraries
-
 plugins {
     id("com.android.library")
 }
@@ -28,6 +26,6 @@ dependencies {
     implementation(Libraries.kotlinStdlib)
     implementation(Libraries.appCompat)
 
-    testImplementation(Libraries.junit)
+    testImplementation(TestLibraries.junit)
 }
 
