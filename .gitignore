@@ -14,4 +14,4 @@
 .externalNativeBuild
 buildSrc/build/*
 buildSrc/.gradle
-
+/buildSrc/build/*

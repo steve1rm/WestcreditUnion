@@ -9,6 +9,7 @@ object Versions {
     const val versionName = "1.0"
     const val kotlinVersion = "1.3.0"
     const val gradleVersion = "3.3.2"
+    const val androidXVersion = "1.0.2"
 
     /** Testing */
     const val jUnitVersion = "4.12"
