@@ -6,8 +6,11 @@ object Plugins {
 object Libraries {
     const val kotlinStdlib = "org.jetbrains.kotlin:kotlin-stdlib:${Versions.kotlinVersion}"
     const val appCompat = "androidx.appcompat:appcompat:${Versions.androidXVersion}"
+    const val gson = "com.google.code.gson:gson:${Versions.gsonVersion}"
 }
 
 object TestLibraries {
     const val junit = "junit:junit:${Versions.jUnitVersion}"
+    const val assertJ = "org.assertj:assertj-core:${Versions.assertJVersion}"
+    const val mockitoKotlin = "com.nhaarman:mockito-kotlin:${Versions.mockitoKotlinVersion}"
 }

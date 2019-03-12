@@ -1,4 +1,3 @@
-package westforce.com.westforcecreditunion.entities
 
 data class AddressInfo(
         val id: Int,

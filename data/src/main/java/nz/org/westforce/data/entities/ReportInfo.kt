@@ -1,4 +1,3 @@
-package westforce.com.westforcecreditunion.entities
 
 data class ReportInfo(
         val reportTeller: String,

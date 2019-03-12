@@ -1,3 +1,5 @@
+import org.gradle.kotlin.dsl.implementation
+
 plugins {
     id("com.android.library")
 }
@@ -25,7 +27,10 @@ android {
 dependencies {
     implementation(Libraries.kotlinStdlib)
     implementation(Libraries.appCompat)
+    implementation(Libraries.gson)
 
     testImplementation(TestLibraries.junit)
+    testImplementation(TestLibraries.assertJ)
+    testImplementation(TestLibraries.mockitoKotlin)
 }
 

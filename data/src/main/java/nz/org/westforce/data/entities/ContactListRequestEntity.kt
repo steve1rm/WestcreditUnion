@@ -1,4 +1,3 @@
-package westforce.com.westforcecreditunion.entities
 
 import com.google.gson.annotations.SerializedName
 
