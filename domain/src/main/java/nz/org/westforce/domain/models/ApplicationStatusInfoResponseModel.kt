@@ -1,0 +1,43 @@
+package westforce.com.westforcecreditunion.models
+
+/**
+ * Web service lists the application details like the orgiginator, application name, current status
+ * */
+data class ApplicationStatusInfoResponseModel(
+        val application: String,
+        val internalNumber: Int,
+        val externalNumber: Int,
+        val applicationName: String,
+        val clientApplicationDetails: String,
+        val user: String,
+        val originator: String,
+        val approvedByClientNumber: Int,
+        val loadedByClientNumber: Int,
+        val declinedByClientNumber: Int,
+        val draftStatus: String,
+        val owner: String,
+        val organisation: String,
+        val approvalClientReference: String,
+        val applicationTitle: String,
+        val salutation: String,
+        val openingBranch: String,
+        val tradingBranch: String,
+        val accountManager: String,
+        val salesChannel: String,
+        val subPrime: String,
+        val industryCode: String,
+        val region: String,
+        val costCentre: String,
+        val convertedSequenceNumber: String,
+        val taxRegion: String,
+        val comparisonRatesSupplied: String,
+        val dealerRateOverride: String,
+        val settlementDate: String,
+        val declinedDate: String,
+        val declinedTime: String,
+        val withdrawnDate: String,
+        val withDrawnTime: String,
+        val paymentMethod: String,
+        val appStatus: String,
+        val currentTaskWith: String,
+        val appStatusCode: String)

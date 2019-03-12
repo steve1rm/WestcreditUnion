@@ -1,0 +1,41 @@
+package westforce.com.westforcecreditunion.models
+
+/**
+ * The Contact list web service will provide the ability to list contact details for a client.
+ **/
+data class ContractListResponseModel(
+        val contactMethod: String,
+        val contact: String,
+        val effectiveDate: String,
+        val expiryDate: String,
+        val preferredMethod: Char,
+        val contactId: String,
+        val addressType: Char,
+        val apartment: String,
+        val building: String,
+        val floor: String,
+        val unitType: String,
+        val streetFrom: String,
+        val streetTo: String,
+        val alpha: String,
+        val streetName: String,
+        val streetDirection: String,
+        val streetType: String,
+        val suburb: String,
+        val city: String,
+        val state: String,
+        val postcode: String,
+        val country: String,
+        val careOfName: String,
+        val addressLine: String,
+        val latitude: String,
+        val longitude: String,
+        val verificationService: String,
+        val externalReference: String,
+        val countryCode: String,
+        val stdCode: String,
+        val phoneNumber: String,
+        val emailAddress: String,
+        val faxCountryCode: String,
+        val faxNetworkCode: String,
+        val faxPhoneNumber: String)
