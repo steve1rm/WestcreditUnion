@@ -13,10 +13,13 @@ class SharedUserPreferencesImpTest {
     @Before
     fun setUp() {
         sharedUserPreferenceImp = SharedUserPreferencesImp(context, "sharedPreferenceName")
+        assertThat(sharedUserPreferenceImp).isNotNull
     }
 
+    /* TODO need to complete unit testing */
     @Test
-    fun `sharedUserPreferencesImp should not be null`() {
-        assertThat(sharedUserPreferenceImp).isNotNull
+    fun `should getValue`() {
+        val name = "name"
+//        name.getValue("key", sharedUserPreferenceImp)
     }
 }

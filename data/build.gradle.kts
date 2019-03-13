@@ -2,6 +2,7 @@ import org.gradle.kotlin.dsl.implementation
 
 plugins {
     id("com.android.library")
+    id("kotlin-android")
 }
 
 android {
