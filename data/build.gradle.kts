@@ -29,6 +29,9 @@ dependencies {
     implementation(Libraries.kotlinStdlib)
     implementation(Libraries.appCompat)
     implementation(Libraries.gson)
+    implementation(Libraries.retrofit2)
+    implementation(Libraries.adapterRxjava2)
+    implementation(Libraries.converterSimpleXml)
 
     testImplementation(TestLibraries.junit)
     testImplementation(TestLibraries.assertJ)

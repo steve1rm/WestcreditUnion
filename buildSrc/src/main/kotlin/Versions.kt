@@ -11,6 +11,7 @@ object Versions {
     const val gradleVersion = "3.3.2"
     const val androidXVersion = "1.0.2"
     const val gsonVersion = "2.8.5"
+    const val retrofitVersion = "2.5.0"
 
     /** Testing */
     const val jUnitVersion = "4.12"
