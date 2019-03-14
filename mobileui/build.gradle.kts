@@ -1,14 +1,14 @@
-import org.gradle.kotlin.dsl.implementation
-
 plugins {
-    id("com.android.library")
-    id("kotlin-android")
+    id("com.android.application")
+    kotlin("android")
+    kotlin("kapt")
 }
 
 android {
     compileSdkVersion(Versions.compileSdkVersion)
 
     defaultConfig {
+        applicationId = "nz.org.westforce.mobileui"
         minSdkVersion(Versions.minSdkVersion)
         targetSdkVersion(Versions.targetSdkVersion)
         versionCode = Versions.versionCode
@@ -26,16 +26,16 @@ android {
 }
 
 dependencies {
-    implementation(Libraries.kotlinStdlib)
     implementation(Libraries.appCompat)
-    implementation(Libraries.gson)
-    implementation(Libraries.retrofit2)
-    implementation(Libraries.adapterRxjava2)
-    implementation(Libraries.converterSimpleXml)
+    implementation(Libraries.kotlinStdlib)
     implementation(Libraries.daggerAndroid)
-
+    implementation(Libraries.daggerSupport)
+    kapt(Libraries.daggerCompiler)
+    kapt(Libraries.daggerProcessor)
+    
     testImplementation(TestLibraries.junit)
-    testImplementation(TestLibraries.assertJ)
-    testImplementation(TestLibraries.mockitoKotlin)
+
+    androidTestImplementation(TestLibraries.runner)
+    androidTestImplementation(TestLibraries.espressoCore)
 }
 
