@@ -13,6 +13,7 @@ object Versions {
     const val gsonVersion = "2.8.5"
     const val retrofitVersion = "2.5.0"
     const val daggerAndroidVersion = "2.21"
+    const val okhttpVersion = "3.12.1"
 
     /** Testing */
     const val jUnitVersion = "4.12"

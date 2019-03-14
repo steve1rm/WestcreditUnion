@@ -32,6 +32,10 @@ dependencies {
     implementation(Libraries.daggerSupport)
     kapt(Libraries.daggerCompiler)
     kapt(Libraries.daggerProcessor)
+    implementation(Libraries.retrofit2)
+    implementation(Libraries.converterSimpleXml)
+    implementation(Libraries.loggingInterceptor)
+    implementation(Libraries.okhttp)
     
     testImplementation(TestLibraries.junit)
 

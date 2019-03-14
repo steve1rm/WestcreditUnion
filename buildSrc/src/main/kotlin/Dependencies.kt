@@ -14,6 +14,8 @@ object Libraries {
     const val daggerCompiler = "com.google.dagger:dagger-compiler:${Versions.daggerAndroidVersion}"
     const val daggerProcessor = "com.google.dagger:dagger-android-processor:${Versions.daggerAndroidVersion}"
     const val daggerSupport = "com.google.dagger:dagger-android-support:${Versions.daggerAndroidVersion}"
+    const val okhttp = "com.squareup.okhttp3:okhttp:${Versions.okhttpVersion}"
+    const val loggingInterceptor = "com.squareup.okhttp3:logging-interceptor:${Versions.okhttpVersion}"
 }
 
 object TestLibraries {
