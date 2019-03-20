@@ -1,21 +1,19 @@
-package nz.org.westforce.mobileui.di
+package nz.org.westforce.data.di
 
 import android.content.Context
-import dagger.Module
 import dagger.Provides
-import dagger.Reusable
-import nz.org.westforce.mobileui.BuildConfig
-import nz.org.westforce.mobileui.R
+import nz.org.westforce.data.BuildConfig
+import nz.org.westforce.data.R
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import org.simpleframework.xml.convert.AnnotationStrategy
 import org.simpleframework.xml.core.Persister
 import retrofit2.Retrofit
 import retrofit2.converter.simplexml.SimpleXmlConverterFactory
+import javax.inject.Singleton
 
-@Module
-class NetworkModule {
-    @Reusable
+class TestNetworkModule {
+    @Singleton
     @Provides
     fun httpLoggingInterceptor(): HttpLoggingInterceptor {
         val loggingInterceptor = HttpLoggingInterceptor()
@@ -30,7 +28,7 @@ class NetworkModule {
         return loggingInterceptor
     }
 
-    @Reusable
+    @Singleton
     @Provides
     fun provideOkHttpClient(httpLoggingInterceptor: HttpLoggingInterceptor): OkHttpClient {
         return OkHttpClient.Builder()
@@ -38,7 +36,7 @@ class NetworkModule {
             .build()
     }
 
-    @Reusable
+    @Singleton
     @Provides
     fun provideRetrofit(context: Context, okHttpClient: OkHttpClient): Retrofit {
         return Retrofit.Builder()

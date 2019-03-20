@@ -16,6 +16,8 @@ object Libraries {
     const val daggerSupport = "com.google.dagger:dagger-android-support:${Versions.daggerAndroidVersion}"
     const val okhttp = "com.squareup.okhttp3:okhttp:${Versions.okhttpVersion}"
     const val loggingInterceptor = "com.squareup.okhttp3:logging-interceptor:${Versions.okhttpVersion}"
+    const val rxjava = "io.reactivex.rxjava2:rxjava:${Versions.rxjavaVersion}"
+    const val rxkotlin = "io.reactivex.rxjava2:rxkotlin:${Versions.rxkotlinVersion}"
 }
 
 object TestLibraries {

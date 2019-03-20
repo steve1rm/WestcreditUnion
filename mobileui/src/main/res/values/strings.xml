@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">mobileui</string>
+    <string name="webserviceUrl" translatable="false">http://www.holidaywebservice.com</string>
 </resources>

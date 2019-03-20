@@ -35,5 +35,5 @@ data class ContractListResponseEntity(
         @SerializedName("phone-number") val phoneNumber: String,
         @SerializedName("email-address") val emailAddress: String,
         @SerializedName("fax-country-code") val faxCountryCode: String,
-        @SerializedName("fax-network-code") val faxNetworkCode: String,
+        @SerializedName("fax-nz.org.westforce.data.network-code") val faxNetworkCode: String,
         @SerializedName("fax-phone-number") val faxPhoneNumber: String)

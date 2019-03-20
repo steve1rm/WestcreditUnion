@@ -41,5 +41,7 @@ dependencies {
 
     androidTestImplementation(TestLibraries.runner)
     androidTestImplementation(TestLibraries.espressoCore)
+
+    implementation(project(":data"))
 }
 

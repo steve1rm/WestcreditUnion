@@ -33,6 +33,10 @@ dependencies {
     implementation(Libraries.adapterRxjava2)
     implementation(Libraries.converterSimpleXml)
     implementation(Libraries.daggerAndroid)
+    implementation(Libraries.rxjava)
+    implementation(Libraries.rxkotlin)
+    implementation(Libraries.okhttp)
+    implementation(Libraries.loggingInterceptor)
 
     testImplementation(TestLibraries.junit)
     testImplementation(TestLibraries.assertJ)
