@@ -23,6 +23,10 @@ android {
             proguardFiles(getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro")
         }
     }
+
+        lintOptions {
+            isAbortOnError = false
+        }
 }
 
 dependencies {
@@ -33,6 +37,9 @@ dependencies {
     implementation(Libraries.adapterRxjava2)
     implementation(Libraries.converterSimpleXml)
     implementation(Libraries.daggerAndroid)
+    implementation(Libraries.daggerSupport)
+    kapt(Libraries.daggerCompiler)
+    kapt(Libraries.daggerProcessor)
     implementation(Libraries.rxjava)
     implementation(Libraries.rxkotlin)
     implementation(Libraries.okhttp)
@@ -41,5 +48,10 @@ dependencies {
     testImplementation(TestLibraries.junit)
     testImplementation(TestLibraries.assertJ)
     testImplementation(TestLibraries.mockitoKotlin)
+    testImplementation(Libraries.daggerAndroid)
+    testImplementation(Libraries.daggerSupport)
+
+    kaptTest(Libraries.daggerCompiler)
+    kaptTest(Libraries.daggerProcessor)
 }
 

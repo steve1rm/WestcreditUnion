@@ -37,10 +37,17 @@ dependencies {
     implementation(Libraries.loggingInterceptor)
     implementation(Libraries.okhttp)
     
-    testImplementation(TestLibraries.junit)
-
     androidTestImplementation(TestLibraries.runner)
     androidTestImplementation(TestLibraries.espressoCore)
+
+    testImplementation(TestLibraries.junit)
+    testImplementation(TestLibraries.assertJ)
+    testImplementation(TestLibraries.mockitoKotlin)
+    testImplementation(Libraries.daggerAndroid)
+    testImplementation(Libraries.daggerSupport)
+
+    kaptTest(Libraries.daggerCompiler)
+    kaptTest(Libraries.daggerProcessor)
 
     implementation(project(":data"))
 }
