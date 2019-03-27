@@ -10,4 +10,3 @@ import javax.inject.Singleton
 interface TestWestforceCeditUnionComponent {
     fun inject(webServicesImpTest: WebServicesImpTest)
 }
-
