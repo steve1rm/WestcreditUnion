@@ -43,12 +43,6 @@ class TestNetworkModule {
 
     @Singleton
     @Provides
-    fun proviceContext(): Context {
-        return Mockito.mock(Context::class.java)
-    }
-
-    @Singleton
-    @Provides
     fun provideRetrofit(context: Context, okHttpClient: OkHttpClient): Retrofit {
         return Retrofit.Builder()
             .baseUrl(context.getString(R.string.webserviceUrl))

@@ -42,6 +42,7 @@ dependencies {
     kapt(Libraries.daggerProcessor)
     implementation(Libraries.rxjava)
     implementation(Libraries.rxkotlin)
+    implementation(Libraries.adapterRxjava2)
     implementation(Libraries.okhttp)
     implementation(Libraries.loggingInterceptor)
 

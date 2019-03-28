@@ -37,6 +37,7 @@ dependencies {
     implementation(Libraries.loggingInterceptor)
     implementation(Libraries.okhttp)
     implementation(Libraries.constraintLayout)
+    implementation(Libraries.adapterRxjava2)
 
     androidTestImplementation(TestLibraries.runner)
     androidTestImplementation(TestLibraries.espressoCore)

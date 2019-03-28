@@ -11,6 +11,7 @@ import okhttp3.logging.HttpLoggingInterceptor
 import org.simpleframework.xml.convert.AnnotationStrategy
 import org.simpleframework.xml.core.Persister
 import retrofit2.Retrofit
+import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory
 import retrofit2.converter.simplexml.SimpleXmlConverterFactory
 
 @Module
@@ -45,6 +46,7 @@ class NetworkModule {
             .baseUrl(context.getString(R.string.webserviceUrl))
             .client(okHttpClient)
             .addConverterFactory(SimpleXmlConverterFactory.createNonStrict(Persister(AnnotationStrategy())))
+            .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
             .build()
     }
 }
