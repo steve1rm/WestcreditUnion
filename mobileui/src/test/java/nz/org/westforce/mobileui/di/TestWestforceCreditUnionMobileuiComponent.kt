@@ -1,10 +1,12 @@
 package nz.org.westforce.mobileui.di
 
 import dagger.Component
+import nz.org.westforce.data.di.TestNetworkModule
+import nz.org.westforce.mobileui.network.TestNetworkRequest
 import javax.inject.Singleton
 
 @Singleton
-@Component(modules = [TestWebServiceModule::class])
+@Component(modules = [TestNetworkModule::class])
 interface TestWestforceCreditUnionMobileuiComponent {
-    fun inject(exampleUnitTest: ExampleUnitTest)
+    fun inject(testNetworkModule: TestNetworkRequest)
 }

@@ -36,7 +36,8 @@ dependencies {
     implementation(Libraries.converterSimpleXml)
     implementation(Libraries.loggingInterceptor)
     implementation(Libraries.okhttp)
-    
+    implementation(Libraries.constraintLayout)
+
     androidTestImplementation(TestLibraries.runner)
     androidTestImplementation(TestLibraries.espressoCore)
 
@@ -51,4 +52,3 @@ dependencies {
 
     implementation(project(":data"))
 }
-

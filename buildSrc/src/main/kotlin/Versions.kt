@@ -16,6 +16,7 @@ object Versions {
     const val okhttpVersion = "3.12.1"
     const val rxjavaVersion = "2.2.4"
     const val rxkotlinVersion = "2.3.0"
+    const val constraintLayoutVersion = "1.1.3"
 
     /** Testing */
     const val jUnitVersion = "4.12"

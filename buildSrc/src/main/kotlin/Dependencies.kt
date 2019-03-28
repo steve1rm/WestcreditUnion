@@ -18,6 +18,7 @@ object Libraries {
     const val loggingInterceptor = "com.squareup.okhttp3:logging-interceptor:${Versions.okhttpVersion}"
     const val rxjava = "io.reactivex.rxjava2:rxjava:${Versions.rxjavaVersion}"
     const val rxkotlin = "io.reactivex.rxjava2:rxkotlin:${Versions.rxkotlinVersion}"
+    const val constraintLayout = "androidx.constraintlayout:constraintlayout:${Versions.constraintLayoutVersion}"
 }
 
 object TestLibraries {
