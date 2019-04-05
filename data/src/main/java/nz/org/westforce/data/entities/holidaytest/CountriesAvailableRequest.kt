@@ -6,8 +6,6 @@ import org.simpleframework.xml.NamespaceList
 import org.simpleframework.xml.Root
 
 @Root(name = "GetCountriesAvailable", strict = false)
-@NamespaceList(value = [
-    Namespace(reference = "http://www.holidaywebservice.com"),
-    Namespace(reference="http://www.w3.org/2003/05/soap-envelope")])
+@Namespace(reference = "http://www.holidaywebservice.com")
 data class CountriesAvailableRequest(
     @Element(name = "GetCountriesAvailable", required = false) val code: String)
