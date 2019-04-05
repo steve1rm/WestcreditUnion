@@ -5,7 +5,7 @@ import org.simpleframework.xml.NamespaceList
 import org.simpleframework.xml.Root
 import org.simpleframework.xml.Element
 
-@Root(name = "soap12:Envelope")
+@Root(name = "Envelope")
 @NamespaceList(value = [
     Namespace(prefix = "xsi", reference = "http://www.w3.org/2001/XMLSchema-instance"),
     Namespace(prefix = "xsd", reference = " http://www.w3.org/2001/XMLSchema"),

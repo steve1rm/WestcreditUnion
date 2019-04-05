@@ -3,6 +3,8 @@ import org.gradle.kotlin.dsl.implementation
 plugins {
     id("com.android.library")
     id("kotlin-android")
+    kotlin("android")
+    kotlin("kapt")
 }
 
 android {

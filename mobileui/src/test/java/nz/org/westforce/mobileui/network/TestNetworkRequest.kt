@@ -1,8 +1,7 @@
 package nz.org.westforce.mobileui.network
 
-import nz.org.westforce.data.di.TestNetworkModule
 import nz.org.westforce.data.network.WebServicesImp
-import nz.org.westforce.mobileui.di.DaggerWestforceCreditUnionMobileuiComponent
+import nz.org.westforce.mobileui.di.DaggerTestWestforceCreditUnionMobileuiComponent
 import org.assertj.core.api.Assertions.assertThat
 import org.junit.Before
 import org.junit.Test
@@ -16,14 +15,11 @@ class TestNetworkRequest {
     @Before
     fun setup() {
 
-
-
-/*
         DaggerTestWestforceCreditUnionMobileuiComponent
             .builder()
-            .testWebServiceModule(TestNetworkModule())
             .build()
-*/
+            .inject(this)
+
     }
 
     @Test

@@ -1,18 +1,15 @@
 package nz.org.westforce.mobileui.di
 
-import android.content.Context
 import dagger.Module
 import dagger.Provides
 import nz.org.westforce.data.BuildConfig
-import nz.org.westforce.data.R
 import nz.org.westforce.data.network.WebServices
-import nz.org.westforce.data.network.WebServicesImp
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
-import org.mockito.Mockito
 import org.simpleframework.xml.convert.AnnotationStrategy
 import org.simpleframework.xml.core.Persister
 import retrofit2.Retrofit
+import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory
 import retrofit2.converter.simplexml.SimpleXmlConverterFactory
 import javax.inject.Singleton
 
@@ -43,11 +40,12 @@ class TestNetworkModule {
 
     @Singleton
     @Provides
-    fun provideRetrofit(context: Context, okHttpClient: OkHttpClient): Retrofit {
+    fun provideRetrofit(okHttpClient: OkHttpClient): Retrofit {
         return Retrofit.Builder()
-            .baseUrl(context.getString(R.string.webserviceUrl))
+            .baseUrl("http://www.holidaywebservice.com")
             .client(okHttpClient)
             .addConverterFactory(SimpleXmlConverterFactory.createNonStrict(Persister(AnnotationStrategy())))
+            .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
             .build()
     }
 

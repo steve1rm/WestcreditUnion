@@ -11,19 +11,3 @@ interface TestWestforceCeditUnionComponent {
     fun inject(webServicesImpTest: WebServicesImpTest)
 }
 
-/*
-@Singleton
-@Component(modules = [AndroidInjectionModule::class])
-interface TestWestforceCreditUnionMobileuiComponent {
-    @Component.Builder
-    interface Builder {
-        @BindsInstance
-        fun application(application: TestWestforceCreditUnionApplication): Builder
-
-        fun build(): TestWestforceCreditUnionMobileuiComponent
-    }
-
-    fun inject(application: TestWestforceCreditUnionApplication)
-}
-*/
-

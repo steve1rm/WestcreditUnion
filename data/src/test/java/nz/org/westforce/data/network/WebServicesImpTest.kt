@@ -1,59 +1,32 @@
 package nz.org.westforce.data.network
 
-import android.content.Context
-import dagger.Provides
-import nz.org.westforce.data.BuildConfig
-import nz.org.westforce.data.R
-import okhttp3.OkHttpClient
-import okhttp3.logging.HttpLoggingInterceptor
+import nz.org.westforce.data.di.DaggerTestWestforceCeditUnionComponent
+import org.assertj.core.api.Assertions.assertThat
+import org.junit.Before
 import org.junit.Test
-import org.simpleframework.xml.convert.AnnotationStrategy
-import org.simpleframework.xml.core.Persister
-import retrofit2.Retrofit
-import retrofit2.converter.simplexml.SimpleXmlConverterFactory
-import javax.inject.Singleton
+import javax.inject.Inject
 
 class WebServicesImpTest {
 
-    private lateinit var webServicesImp: WebServicesImp
+    @Inject
+    lateinit var webServicesImp: WebServicesImp
 
-    @Test
+    @Before
     fun setUp() {
         /* the DaggerTestWestforceCreditUnionComponent is not generated */
 
-
-    }
-
-    @Singleton
-    @Provides
-    fun httpLoggingInterceptor(): HttpLoggingInterceptor {
-        val loggingInterceptor = HttpLoggingInterceptor()
-
-        loggingInterceptor.level = if(BuildConfig.DEBUG) {
-            HttpLoggingInterceptor.Level.BODY
-        }
-        else {
-            HttpLoggingInterceptor.Level.NONE
-        }
-
-        return loggingInterceptor
-    }
-
-    @Singleton
-    @Provides
-    fun provideOkHttpClient(httpLoggingInterceptor: HttpLoggingInterceptor): OkHttpClient {
-        return OkHttpClient.Builder()
-            .addInterceptor(httpLoggingInterceptor)
+        DaggerTestWestforceCeditUnionComponent.builder()
             .build()
+            .inject(this)
     }
 
-    @Singleton
-    @Provides
-    fun provideRetrofit(context: Context, okHttpClient: OkHttpClient): Retrofit {
-        return Retrofit.Builder()
-            .baseUrl(context.getString(R.string.webserviceUrl))
-            .client(okHttpClient)
-            .addConverterFactory(SimpleXmlConverterFactory.createNonStrict(Persister(AnnotationStrategy())))
-            .build()
+    @Test
+    fun shouldNotBeNull() {
+        assertThat(webServicesImp).isNotNull
+    }
+
+    @Test
+    fun callWebservice() {
+        webServicesImp.requestFromWebService()
     }
 }
